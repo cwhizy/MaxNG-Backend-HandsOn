@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Star Wars Movies List</title>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h2>Star Wars Movies List</h2>
+        <div class="wrapper">
+            <div class="movies">
+                <% if(movies != null) { %>
+                    <% movies.forEach((movie) => { %>
+                        <a href="/movie/<%= movie.episode_id %>" class="movies_card">               
+                            <h3><%= movie.title %></h3>                            
+                        </a>
+                        <p><%= movie.opening_crawl %></p>
+                        <hr />
+                        <p><strong>No. of Movie Characters: <%= movie.characters.length %></strong></p>
+                    <% }) %>
+                    <% } else { %>
+                        No movies found.
+                    <% } %>
+            </div>
+        </div>  
+    </body>
+</html> 

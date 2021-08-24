@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star War Movie</title> 
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="movies-single">
+                <a href="/">&larr;- Back</a>
+                <% if(movie != null) { %>
+                    <h2><%= movie.title %></h2>
+                    <p><%= movie.opening_crawl %></p>
+                    <hr />
+                    <p><strong>No of Characters: <%= movie.characters.length %></strong></p>                    
+                    <p><strong>No of Comments: <%= countComments['Count'] %></strong></p>
+                    <hr />
+                    <div class="movieComments">
+                        <h3>Comments:</h3>
+                        <% if(movieComments != null) { %>
+                            <ul>
+                            <% movieComments.forEach((comment) => { %>
+                                <li>
+                                    <%= comment['movie_comment'] %>
+                                    <p><b>IP Address: </b><%= comment['ip_address'] %>, <b>Created on: </b><%= comment['created_date'] %></p>
+                                </li>
+
+                            <% }) %>
+                            </ul>
+                        <% } else { %>
+                                <p>No Comments found.</p>
+                        <% } %>
+                    </div>
+                <% } else { %>
+                    No details found.
+                <% } %>
+        </div>
+    </div>  
+</body>
+</html> 
