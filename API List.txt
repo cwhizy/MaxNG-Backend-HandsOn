@@ -1,0 +1,32 @@
+API Documentation
+
+
+BASE_URL: http://localhost:3000/comments/
+
+    // Create a new Movie Comment
+    METHOD: post
+	PATH: /comments
+  
+    // Retrieve all Movie Comment
+    METHOD: get
+	PATH: /comments/movieComments/:episode_id
+
+    // Retrieve Movie Comment count
+    METHOD: get
+	PATH: /comments/countComments/:episode_id
+  
+    // Retrieve a single movie comment with commentId
+    METHOD: get
+	PATH: /comments/:commentId
+  
+    // Update a Movie Comment with commentId
+    METHOD: put
+	PATH: /comments/:commentId
+  
+    // Delete a Movie Comment with commentId
+    METHOD: delete
+	PATH: /comments/:commentId
+  
+    // Delete all comments for a movie
+    METHOD: delete
+	PATH: /comments
