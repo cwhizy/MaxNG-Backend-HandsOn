@@ -1,6 +1,6 @@
 const sql = require("./db.js");
 
-// constructor
+// constructors
 const Movie_Comment = function(comment) {
   this.episode_id = comment.episode_id;
   this.movie_title = comment.movie_title;
